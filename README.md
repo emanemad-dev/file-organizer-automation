@@ -2,61 +2,71 @@
 
 ### 🚀 Python Desktop Automation Tool
 
-A production-style desktop application built with Python and Tkinter that intelligently organizes files in any directory based on their **extensions and size**, with a focus on safety, usability, and performance.
+A production-style desktop application built with Python and Tkinter that intelligently organizes files in any directory based on their **file type and size**, with a strong focus on safety, usability, and automation.
 
 ---
 
 ## ✨ Overview
 
-Managing messy folders can be time-consuming and error-prone.
-This tool automates the process by dynamically categorizing files, handling edge cases, and providing a safe, user-friendly interface.
+Managing messy folders manually is inefficient and error-prone.
+
+This tool automates file organization by:
+- Analyzing files dynamically
+- Grouping them intelligently
+- Ensuring safe operations with undo support and logging
+
+It is designed as a **real-world desktop utility**, not just a script.
 
 ---
 
 ## 🔥 Key Features
 
 ### 📁 Smart File Organization
-
-* Automatically organizes files based on their **extensions**
-* Supports **all file types dynamically** (no predefined mapping)
-
-### 🧠 Intelligent Processing
-
-* Detects and separates **large files** into a dedicated folder
-* Prevents **duplicate overwrites** with automatic renaming
-* Skips **hidden/system files** for clean results
-* Avoids creating empty folders
-
-### 🛡️ Safety & Control
-
-* 🧪 **Dry Run Mode** → Preview changes before applying
-* 🔁 **Undo Feature** → Revert the last operation instantly
-* 🧾 **Logging System** → Track all operations with timestamps
-
-### ⚡ User Experience
-
-* 📊 Real-time **progress tracking**
-* 🖥️ Clean and simple **GUI (Tkinter)**
-* 📂 Automatically opens folder after execution
+- Automatically organizes files based on **file extensions**
+- Fully **dynamic system** (no hardcoded mappings required)
+- Creates folders only when needed (no empty folders)
 
 ---
 
-## 🏗️ Architecture & Design
+### 🧠 Intelligent Processing
+- Detects **large files** and separates them into a dedicated folder
+- Prevents **data loss** by avoiding overwrites (auto-renaming duplicates)
+- Skips hidden/system files for clean processing
 
-The application follows a clean and modular structure:
+---
 
-* **File Categorization Layer** → Determines file destination (extension + size)
-* **Processing Engine** → Handles grouping and safe file movement
-* **UI Layer (Tkinter)** → Provides user interaction and feedback
-* **Logging System** → Ensures traceability and debugging
+### 🛡️ Safety & Control
+- 🧪 **Dry Run Mode** → Preview all actions before execution
+- 🔁 **Undo Feature** → Revert the last operation safely
+- 🧾 **Logging System** → Tracks all operations with timestamps (daily logs)
+
+---
+
+### ⚡ User Experience
+- 🖥️ Simple and clean **Tkinter GUI**
+- 📊 Real-time progress tracking
+- 📂 Auto-opens folder after execution (Windows)
+
+---
+
+## 🏗️ Architecture
+
+The project follows a clean modular structure:
+
+- **File Detection Layer** → Classifies files by type & size  
+- **Processing Engine** → Handles safe file movement & grouping  
+- **UI Layer (Tkinter)** → User interaction & control  
+- **Logging System** → Full traceability of actions  
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Python 3**
-* **Tkinter** – Desktop GUI
-* **os / shutil** – File system operations
+- Python 3
+- Tkinter (GUI)
+- OS Module (File system operations)
+- Shutil (File handling)
+- Datetime (Logging system)
 
 ---
 
@@ -65,22 +75,23 @@ The application follows a clean and modular structure:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/file-organizer.git
-cd file-organizer
+git clone https://github.com/your-username/dynamic-file-organizer.git
+cd dynamic-file-organizer
+
+## ▶️ Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/emanemad-dev/file-organizer-automation.git
+cd file-organizer-automation
 ```
 
 ### 2. Run the application
 
 ```bash
-python file_organizer_gui.py
+python file_organizer.py
 ```
-
----
-
-## 📸 Demo
-
-> Add screenshots or a short demo video here
-> (Highly recommended for better visibility)
 
 ---
 
@@ -104,9 +115,11 @@ python file_organizer_gui.py
 ## 📈 Future Improvements
 
 * Preview table before execution
+* Scheduled automatic execution (Task Scheduler integration)
 * Custom file size filters via GUI
 * Multi-directory processing
 * Export logs to CSV
+* Configurable rules via settings file
 
 ---
 
